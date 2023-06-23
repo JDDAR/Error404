@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+
+    --font-styles: 'Space Mono', monospace;
+    --font-size: 1.5rem;
+    --font-size-h1: 4rem;
+    --font-size-text: 1rem;
+    --font-size-footer: .7rem;
+    --font-regular: 400;
+    --font-bold: 700;
+
+    --background-body: #fff;
+    --text-color: #4f4f4f;
+    --title-color: #333333;
+    --text-footer: #bdbdbd;
+
+    --margin-bottom: 30px;
+    --margin-bottom-alter: 50px;
+
+    /* responsive */
+
+    --font-size-respon-h1: 3rem;
+    --font-size-respon-cel-h1: 2.5rem;
+}
+
+body {
+    background-color: var(--background-body);
+    font-family: var(--font-styles);
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+header.logo {
+    height: 40px;
+    padding: 10px 0px;
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+}
+
+section.contenedor {
+    display: flex;
+    width: 80%;
+}
+
+.img-error,
+.info {
+    flex-direction: column;
+    width: 50%;
+    height: 90vh;
+}
+
+.img-error img {
+    width: 20%;
+    margin-top: 15vh;
+    animation: flotar 5s infinite ease alternate;
+    position: absolute;
+}
+
+@keyframes flotar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    75% {
+        margin-left: 5%;
+    }
+
+    80% {
+        margin-left: 10%;
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+.tex-404 {
+    font-size: var(--font-size-h1);
+    text-align: center;
+    animation: deslizar .5s;
+    color: var(--text-footer);
+    margin-top: 55vh;
+    text-decoration: underline;
+
+}
+
+@keyframes deslizar {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.info {
+    padding-top: 15vh;
+}
+
+.info h1 {
+    font-size: var(--font-size-h1);
+    line-height: 80px;
+    margin-bottom: var(--margin-bottom);
+    color: var(--title-color);
+}
+
+.info p {
+    font-weight: var(--font-regular);
+    font-size: var(--font-size-text);
+    width: 40%;
+    text-align: justify;
+    color: var(--text-color);
+    margin-bottom: var(--margin-bottom-alter);
+
+}
+
+.enlaceHome {
+    margin-top: 55vh !important;
+    background-color: var(--title-color);
+    padding: 20px;
+    color: var(--text-footer);
+    font-size: var(--font-size-footer);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    font-size: var(--font-size-footer);
+    color: var(--text-footer);
+    bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* responsive  */
+
+@media (max-width: 920px) {
+    .info h1 {
+        font-size: var(--font-size-respon-h1);
+        line-height: 50px;
+    }
+
+    .info p {
+        width: 50%;
+        margin-bottom: 100px;
+    }
+
+    .img-error img {
+        width: 30%;
+        margin-top: 10vh;
+    }
+}
+
+@media (max-width: 700px) {
+    section.contenedor {
+        display: block;
+        width: 80%;
+    }
+
+    .img-error,
+    .info {
+        width: 100%;
+        height: auto;
+    }
+
+    .info {
+        text-align: center;
+        padding-top: 5vh;
+        margin-bottom: var(--margin-bottom-alter);
+    }
+
+    .info p {
+        width: 80%;
+        text-align: center;
+        margin: var(--margin-bottom-alter) auto;
+
+    }
+
+    .tex-404 {
+        margin-top: 0vh;
+        padding-top: 30vh;
+    }
+
+    .img-error img {
+        width: 30%;
+        margin-top: 0vh;
+        margin-left: 50%;
+        position: absolute;
+    }
+
+    .enlaceHome {
+        margin-bottom: var(--margin-bottom-alter);
+    }
+
+}
+
+@media (max-width: 500px) {
+    .img-error img {
+        width: 40%;
+    }
+
+    .info h1 {
+        font-size: var(--font-size-respon-cel-h1);
+    }
+}
+
+@media (max-width: 400px) {
+    .img-error img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 320px) {
+    .img-error img {
+        width: 70%;
+        margin-left: 20%;
+    }
+}
