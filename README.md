@@ -9,11 +9,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://nodosd.github.io/Error404/">
+    <a href="https://nodosd.github.io/Error404/" target="_blank">
       Demo
     </a>
     <span> | </span>
-    <a href="https://nodosd.github.io/Error404/">
+    <a href="https://nodosd.github.io/Error404/"target="_blank>
       Solution
     </a>
     <span> | </span>
